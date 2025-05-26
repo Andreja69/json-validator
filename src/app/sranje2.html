@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Textarea Row Counter</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+
+    textarea {
+      width: 100%;
+      height: 150px;
+      font-family: monospace;
+      font-size: 16px;
+      padding: 10px;
+      box-sizing: border-box;
+    }
+
+    .row-count {
+      margin-top: 10px;
+      font-size: 14px;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+
+  <textarea id="myTextarea" placeholder="Type something..."></textarea>
+  <div class="row-count" id="rowCount">Rows: 1</div>
+
+  <script>
+    const textarea = document.getElementById('myTextarea');
+    const rowCount = document.getElementById('rowCount');
+
+    function updateRowCount() {
+      const lines = textarea.value.split('\n').length;
+      rowCount.textContent = `Rows: ${lines}`;
+    }
+
+    textarea.addEventListener('input', updateRowCount);
+  </script>
+
+</body>
+</html>

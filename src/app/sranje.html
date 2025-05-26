@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Matching Heights with Flexbox</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+
+    .wrapper {
+      display: flex;
+      gap: 20px;
+      align-items: stretch; /* Makes both children match height */
+    }
+
+    .left, .right {
+      flex: 1;
+      border: 2px solid #888;
+      padding: 15px;
+      box-sizing: border-box;
+      background-color: #f9f9f9;
+    }
+
+    .left textarea {
+      width: 100%;
+      height: auto;
+      min-height: 100px;
+      resize: vertical;
+      padding: 10px;
+      font-family: monospace;
+      font-size: 14px;
+      box-sizing: border-box;
+    }
+
+    .right {
+      background-color: #eef;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Flexbox: Right side matches left height</h2>
+
+  <div class="wrapper">
+    <div class="left">
+      <p>Type in the textarea to expand it and see the right box follow its height:</p>
+      <textarea oninput="adjustHeight(this)"></textarea>
+    </div>
+
+    <div class="right">
+      <p>I automatically match the height of the left box, thanks to Flexbox.</p>
+    </div>
+  </div>
+
+  <script>
+    // Optional: auto-expand textarea height
+    function adjustHeight(el) {
+      el.style.height = "auto"; // Reset first
+      el.style.height = el.scrollHeight + "px"; // Grow with content
+    }
+  </script>
+
+</body>
+</html>

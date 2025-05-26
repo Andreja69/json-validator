@@ -1,0 +1,169 @@
+.container{
+    width: 80%;
+    margin: 0  auto;
+    /* min-height: 500px; */
+    /* height: 500px; */
+    background-color: #0c4a6e;
+
+    
+}
+.title_holder{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1b618a;
+}
+.title{
+    padding: 5px;
+    color: #e0f2fe;
+}
+
+.main{
+    width: 100%;
+    background-color: #e0f2fe; 
+
+}
+.information{
+    display: flex;
+   
+}
+.textarea{
+    width: 100%;
+    background-color: #dddd;
+    padding: 12px;
+    border: 2px solid transparent;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    outline: none;
+    font-size: 10px;
+    resize: vertical;
+    min-height: 200px;
+
+    line-height: 1.9; 
+
+    white-space: pre;
+    overflow-x: auto;
+}
+
+
+.row_count{
+    width: 45px;
+    /* min-height: 190px; */
+    border: 2px solid transparent;
+   background-color: #ddddddb2;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    font-size: 13px;
+    padding: 12px;
+    margin-bottom: 15px;
+    text-align: right;
+
+    transition: height 0.3s ease;
+}
+.row_count p{
+  padding: 2px;
+}
+
+
+.validate_holder{
+    height: 33.333333333%;
+}
+
+.validate {
+  background-color: #28a745; /* Green */
+  color: white;
+  padding: 10px 20px;
+border: 2px solid transparent;
+border-radius: 10px;
+
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+}
+
+.validate:hover {
+  background-color: #188832; /* Darker green on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  transform: translateY(-3px);
+}
+
+
+.other_actions{
+    height: 66.666666666%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+}
+
+.other_actions button{
+     background-color: rgba(255, 255, 255, 0.1); /* Light see-through */
+  color: white;
+  padding: 10px 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+  backdrop-filter: blur(4px); /* Optional: adds a glass effect */
+}
+.other_actions button:hover{
+      background-color: #ccc; /* Solid gray on hover */
+  color: #000;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transform: translateY(-3px);
+}
+
+
+
+.message_failed{
+    width: 100%;
+    
+    background-color: pink;
+    color: rgb(176, 61, 99);
+}
+.message_success{
+     width: 100%;
+  background-color: #28a745; /* Green */
+  color: white;
+}
+
+.textarea_wrapper{
+    position: relative;
+    width: 100%;
+    margin-bottom: 11px;
+ display: inline-block;
+}
+
+
+
+.copy_btn {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+      background-color: rgba(255, 255, 255, 0.1); /* Light see-through */
+  color: white;
+  /* padding: 5px 10px; */
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-top: 3px;
+
+  border: 1px solid white;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+  backdrop-filter: blur(4px); /* Optional: adds a glass effect */
+  
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+  backdrop-filter: blur(4px);
+  cursor: pointer;
+  z-index: 1;
+}
+.copy_btn:hover{
+    background-color: #ccc; /* Solid gray on hover */
+  color: #000;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transform: translateY(-3px);
+}
