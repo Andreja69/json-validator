@@ -5,6 +5,7 @@ function validate(jsonString) {
         try {
             const x = JSON5.parse(jsonString);
             const data = JSON.stringify(x, null, 4);
+            console.log(data.trim());
             return {result: true,commpressedData: data,error : ""}
             } catch (e) {
                 return { result: false, error: e};
